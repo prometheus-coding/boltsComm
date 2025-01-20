@@ -1,0 +1,60 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Start Frontend",
+      "type": "shell",
+      "command": "pnpm",
+      "args": [
+        "frontend"
+      ],
+      "isBackground": true,
+      "presentation": {
+        "reveal": "always",
+        "panel": "new",
+        "group": "develop"
+      }
+    },
+    {
+      "label": "Start Backend Java",
+      "type": "shell",
+      "command": "pnpm",
+      "args": [
+        "backend-java"
+      ],
+      "isBackground": true,
+      "presentation": {
+        "reveal": "always",
+        "panel": "new",
+        "group": "develop"
+      }
+    },
+    {
+      "label": "Start Backend .NET",
+      "type": "shell",
+      "command": "pnpm",
+      "args": [
+        "backend-dotnet"
+      ],
+      "isBackground": true,
+      "presentation": {
+        "reveal": "always",
+        "panel": "new",
+        "group": "develop"
+      }
+    },
+    {
+      "label": "Start All Services",
+      "dependsOrder": "sequence",
+      "dependsOn": [
+        "Start Frontend",
+        "Start Backend Java",
+        "Start Backend .NET"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+packages:
+  - 'packages/frontend'
+  - 'packages/backend-java'
+  - 'packages/backend-dotnet'

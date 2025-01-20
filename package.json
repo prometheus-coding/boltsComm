@@ -1,0 +1,11 @@
+{
+  "name": "study-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "frontend": "pnpm --filter frontend dev",
+    "backend-java": "cd packages/backend-java && ./mvnw spring-boot:run",
+    "backend-dotnet": "cd packages/backend-dotnet && dotnet run",
+    "dev": "pnpm frontend & pnpm backend-java & pnpm backend-dotnet"
+  }
+}
